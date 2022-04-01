@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>All in the cookies</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style0-2.css') }}">
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+                <nav>
+                    <ul>
+                        <li {%- if request.path == "/tastyCookie" %} class="currentpage"{% endif %}>
+                            <a href="/tastyCookie">Final Testing</a>
+                        </li>
+                        <li {%- if request.path == "/deleteTastyCookie" %} class="currentpage"{% endif %}>
+                            <a href="/deleteTastyCookie">Destroy Session</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="center">
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+{% extends "header2.html" %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+        <div class="{{category}}"> {{ message }} </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<h1>Here's your cookie!</h1>
+
+<img id="cookie" src="" alt="cookie" style="width:40%"></div>
+
+<script>
+
+    const imgArrObj = '["snickerdoodle.png", "chocolatechip.png", "monstercookie.png",\
+    "oatmealRaisin.png", "sugar.png"]';
+            
+    function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    };
+
+    switch (randomIntFromInterval(0, 4)){
+
+    case 0:
+        document.getElementById("cookie").src = "{{ url_for('static',filename='../static/images/snickerdoodle.jpg') }}";
+        break;
+            
+    case 1:
+        document.getElementById("cookie").src = "{{ url_for('static',filename='../static/images/chocolatechip.jpg') }}";
+        break;
+        
+    case 2:
+        document.getElementById("cookie").src = "{{ url_for('static',filename='../static/images/monstercookie.jpg') }}";
+        break;
+    
+    case 3:
+        document.getElementById("cookie").src = "{{ url_for('static',filename='../static/images/oatmealRaisin.jpg') }}";
+        break;
+    
+    case 4:
+        document.getElementById("cookie").src = "{{ url_for('static',filename='../static/images/sugar.jpg') }}";
+
+    }
+</script>
+
+{% endblock %}

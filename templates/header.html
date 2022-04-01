@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Employee WWW</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style0-2.css') }}">
+        <script type="text/javascript" src="{{url_for('static',filename='scripts/parse.js') }}"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+                <nav>
+                    <ul>
+                        <li {%- if request.path == "/" %} class="currentpage"{% endif %}>
+                            <a href="/">Home</a>
+                        </li>
+                        <li {%- if request.path == "/employees" %} class="currentpage"{% endif %}>
+                            <a href="/employees">Meet Our Employees</a>
+                        </li>
+                        <li {%- if request.path == "/bulletin" %} class="currentpage"{% endif %}>
+                            <a href="/bulletin">Bulletin Board</a>
+                        </li>
+                        <li {%- if request.path == "/portal" %} class="currentpage"{% endif %}>
+                            <a href="/portal">Employee Portal</a>
+                        </li>
+                        <li {%- if request.path == "/login" %} class="currentpage"{% endif %}>
+                            <a href="/login">Login/Logout</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="center">
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+            <br><br>
+            <footer>
+                <i>This web app is very vulnerable and was created for educational use only. See <a href='/help'>/help</a> for nudges and info.</i>
+            </footer>
+        </div>
+    </body>
+</html>

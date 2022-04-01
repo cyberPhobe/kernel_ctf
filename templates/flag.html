@@ -1,0 +1,33 @@
+<a href="/">Home</a>
+<a href="/flag">Real hints</a>
+
+<h2 id="quote"></h2>
+
+<img id="test" src="" alt="Troll dot png" style="width:80%"></div>
+
+<script>
+
+    const quoteObj = '["This is not the page you\'re looking for. --CTF Admins, probably.", \
+    "The empty vessel makes the loudest sound. --William Shakespheare", "There are eyes behind the mirrors in empty places. --Bob Dylan",\
+    "There is no such thing as an empty space or an empty time. There is always something to see, something to hear. In fact, try as we may to make a silence, we cannot. --John Cage", \
+    "An empty canvas is full. --Robert Rauschenberg","You\'re knocking, but the sound fell silent into the abyss. --CTF Admins, probably.", \
+    "Even in empty space, time and space still exist. --Sean M. Carroll"]';
+
+    const imgArr = '["trolliage.jpg","hacker-evil.gif"]'
+            
+    function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    };
+
+    const rndInt = randomIntFromInterval(0, 6);
+    const moddedNo = rndInt % 2;
+    const obj = JSON.parse(quoteObj);
+
+    document.getElementById("quote").innerHTML = obj[rndInt];
+    if (moddedNo != 0){
+        document.getElementById("test").src = "{{ url_for('static',filename='../static/images/trolliage.jpg') }}";
+    }
+    else {
+        document.getElementById("test").src = "{{ url_for('static',filename='../static/images/hacker-evil.gif') }}";
+    }
+</script>

@@ -1,0 +1,30 @@
+{% extends "header2.html" %}
+
+{% block content %}
+<h1>Reach into the cookie jar</h1>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+        <div class="{{category}}"> {{ message }} </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<form action="" method="post">
+    <div class="block">
+        <label for="user">Username</label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+    </div>
+    <br>
+    <div class="block">
+        <label for="passwd">Password</label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+    </div>
+    <br>
+    <div class="block">
+        <button type="submit" class="login">Login</button>
+    </div>
+</form>
+
+{% endblock %}

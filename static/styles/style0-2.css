@@ -1,0 +1,213 @@
+.layout{
+    width: 100%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: auto;
+    min-height: 100%;
+}
+
+#u_always_read_fine_print_right_lol {
+    font-style: italic;
+    font-size: 5pt !important;
+}
+
+p a {
+    padding: 0;
+}
+
+.logo {
+    width: 500px !important;
+    height: 350px !important;
+}
+
+html, body { 
+	margin:0; 
+	padding:0; 
+	height:100%; 
+}
+
+hr {
+    color: white;
+    size: 5px;
+}
+
+#hidden_hr_value {
+    display: none;
+}
+
+.error {
+    font-size: 15pt;
+    font-weight: bold;
+    color: rgb(114, 28, 36);
+    background-color: rgb(248, 215, 218);
+    border-color: rgb(245, 198, 203);
+    margin: 0 auto;
+}
+
+.warning {
+    font-size: 15pt;
+    font-weight: bold;
+    color: rgb(133, 100, 4);
+    background-color: rgb(255, 243, 205);
+    border-color: rgb(255, 238, 186);
+    margin: 0 auto;
+}
+
+.success {
+    font-size: 15pt;
+    font-weight: bold;
+    color: rgb(21, 87, 36);
+    background-color: rgb(212, 237, 218);
+    border-color: rgb(195, 230, 203);
+    margin: 0 auto;
+}
+
+#shellOut {
+    background-color: black;
+    color: green;
+    font-size: 15pt;
+}
+
+#shell {
+    width: 50%;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+}
+
+.currentpage {
+    border-bottom: 5px solid white;
+    padding: 0;
+}
+
+body {
+	height: 100%;
+	margin: 0 auto;
+}
+
+.center{
+    text-align: center;
+    background-color: rgba(40, 40, 40, .80);
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 20px;
+    min-height: 500px;
+    color: white;
+    padding: 30px 30px 30px 30px;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(2, 125, 105);
+    min-height: 30px;
+    font-size: 14pt;
+    color: white;
+    padding-top: 10px;
+}
+
+.hrLink:visited{ color:  white;}
+.hrLink:link{ color: white;}
+
+nav{ 
+	font-weight: bold;
+	text-align: center;
+	align-items: center;
+}
+nav li{
+    display: inline-block;
+}
+a{
+    text-decoration: underline;
+    padding: 0px 20px;
+}
+a:link{ color: white;}
+a:visited{ color:  white;}
+nav a { text-decoration: none !important;}
+footer a {padding: 0 !important; text-decoration: none !important;}
+nav a:hover{border-bottom: 5px solid white;}
+nav ul{
+    list-style-type: none;
+    font-size: 20pt !important;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+table td {
+    padding: 25px;
+}
+
+ul{
+    font-size: 15pt;
+    list-style-position: inside;
+    padding-left: 0;
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+}
+
+ol {
+    font-size: 15pt;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.block label{
+    font-size: 15pt;
+    display: inline-block;
+    text-align: right;
+    width: 110px;
+}
+
+.radio label{
+    font-size: 15pt;
+    display: inline-block;
+    text-align: left;
+    width: 110px;
+}
+
+form {
+	text-align: center;
+	padding: 50px;
+	width: 50%;
+	margin: auto;
+}
+
+p{
+    font-size: 15pt;
+}
+
+/*Login button */
+.login{
+    cursor: pointer;
+    background-color: rgb(158,158,158);
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+}
+
+#llehs {
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#llehsOut {
+    background-color: black;
+    color: green;
+    font-size: 15pt;
+}

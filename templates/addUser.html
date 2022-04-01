@@ -1,0 +1,36 @@
+{% extends "header.html" %}
+
+{% block content %}
+<h1>User Account Registration</h1>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+        <div class="{{category}}"> {{ message }} <br> {{ err }} </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+<form action="" method="post">
+    <div class="block">
+        <label for="user">Username</label>
+        <input type="text" placeholder="Enter Username" name="username">
+    </div>
+    <br>
+    <div class="block">
+        <label for="passwd">Password</label>
+        <input type="password" placeholder="Enter Password" name="password">
+    </div>
+    <br>
+    <div class="radio">
+        <input type="radio" id="employee" name="usertype" value="employee" checked="checked">
+        <label for="employee">Employee</label><br><br>
+        <input type="radio" id="patient" name="usertype" value="3567">
+        <label for="patient">Flag</label><br>
+    </div><br>
+    <input type="text" name="isHR" value="false" id="hidden_hr_value"></p>
+    <div class="block">
+        <button type="submit" class="login">Submit</button>
+    </div>
+</form>
+{% endblock %}

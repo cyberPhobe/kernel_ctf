@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>All in the cookies</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/style0-2.css') }}">
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+                <nav>
+                    <ul>
+                        <li {%- if request.path == "/better-login-demo" %} class="currentpage"{% endif %}>
+                            <a href="/better-login-demo">Home</a>
+                        </li>
+                        <li {%- if request.path == "/checkCookie" %} class="currentpage"{% endif %}>
+                            <a href="/checkCookie">Taste Testing</a>
+                        </li>
+                        <li {%- if request.path == "/deleteCooke" %} class="currentpage"{% endif %}>
+                            <a href="/deleteCookie">Destroy Session</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <div class="center">
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

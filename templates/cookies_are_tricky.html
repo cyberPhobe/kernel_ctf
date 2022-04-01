@@ -1,0 +1,22 @@
+{% extends "header3.html" %}
+
+{% block content %}
+<h1>I hope this cookie is tasty!</h1>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+    {% for category, message in messages %}
+        <div class="{{category}}"> {{ message }} </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+
+{% if success is sameas true %}
+    <div id="helper"><p>FYI, "2nd user's name" is: {{name}}</p></div>
+{% endif %}
+    
+<form action="" method="post">
+    <button onclick="location.href = '/tastyCookie';" type="submit" class="login">Me too!</button>
+</form>
+
+{% endblock %}
