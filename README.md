@@ -32,4 +32,5 @@ python3 flaskApp.py
 
 *Flags are in the format of kernel{md5_hash}*
 
+## Disclaimer
 *You are responsible for your machine(s) running this application. There are not any warranties or guarantees, written or implied, in the distribution of this software. I am not responsible for any destruction or loss of property by, or for using this vulnerable software.*
