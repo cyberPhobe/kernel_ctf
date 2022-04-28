@@ -1,5 +1,5 @@
 # Vulnerable Flask Web Application
-Vulnerable Flask Application repurposed for CTF usage. Caution: here be dragons!
+Vulnerable Flask Application repurposed for CTF usage (used in KernelCon2022). Caution: here be dragons!
 
 ## Prerequisites
 The following will need to be installed prior to running:
